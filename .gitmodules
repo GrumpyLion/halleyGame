@@ -1,0 +1,3 @@
+[submodule "halley"]
+	path = halley
+	url = https://github.com/GrumpyLion/halley.git
