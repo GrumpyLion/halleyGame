@@ -18,12 +18,14 @@ set (SOURCES
 	"prec.cpp"
 	"src/game.cpp"
 	"src/game_stage.cpp"
+	"src/editor/game_scene_editor.cpp"
 	)
 
 set (HEADERS
 	"prec.h"
 	"src/game.h"
 	"src/game_stage.h"
+	"src/editor/game_scene_editor.h"
 	)
 
 set (GEN_DEFINITIONS

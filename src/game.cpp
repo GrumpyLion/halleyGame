@@ -1,6 +1,8 @@
 #include "game.h"
 #include "game_stage.h"
 
+#include "editor/game_scene_editor.h"
+
 void initOpenGLPlugin(IPluginRegistry &registry);
 void initSDLSystemPlugin(IPluginRegistry &registry, std::optional<String> cryptKey);
 void initSDLAudioPlugin(IPluginRegistry &registry);
@@ -48,12 +50,12 @@ ResourceOptions HalleyGame::initResourceLocator(const Path& gamePath, const Path
 
 String HalleyGame::getName() const
 {
-	return "Halley Blank Project";
+	return "Halley Game";
 }
 
 String HalleyGame::getDataPath() const
 {
-	return "Halley/HalleyBlankProject";
+	return "Halley/HalleyGame";
 }
 
 bool HalleyGame::isDevMode() const
@@ -69,6 +71,12 @@ std::unique_ptr<Stage> HalleyGame::startGame()
 	getAPI().video->setVsync(vsync);
 	getAPI().audio->startPlayback();
 	return std::make_unique<GameStage>();
+}
+
+
+std::unique_ptr<Halley::ISceneEditor> HalleyGame::createSceneEditorInterface()
+{
+	return std::make_unique<GameSceneEditor>();
 }
 
 HalleyGame(HalleyGame);

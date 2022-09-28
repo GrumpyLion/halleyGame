@@ -14,6 +14,8 @@ public:
 	bool isDevMode() const override;
 	std::unique_ptr<Stage> startGame() override;
 
+	std::unique_ptr<ISceneEditor> createSceneEditorInterface() override;
+
 private:
 	const HalleyAPI* api;
 };
