@@ -12,24 +12,59 @@ packs:
     matches:
       - ~:binaryFile:movie
 
+  - name: gameplay
+    matches:
+      - ~:configFile:gameplay
+      - ~:configFile:tilesets
+      - ~:binaryFile:lua
+
   - name: config
     matches:
       - ~:configFile
       - ~:textFile
       - ~:audioEvent
+      - ~:audioObject
       - ~:variableTable
-      - ~:binaryFile:lua
+      - ~:navmeshSet
+      - ~:gameProperties
+      - ~:scriptGraph
+      - ~:binaryFile:binary
+
+  - name: world
+    matches:
+      - ~:prefab
+      - ~:scene
+
+  - name: ui
+    matches:
+      - ~:font
+      - ~:texture:ui_background
+      - ~:texture:fontTex
+      - ~:texture:splash
+      - ~:texture:ui
+      - ~:binaryFile:text
+      - ~:binaryFile:misc
+      - ~:uiDefinition
 
   - name: images
     matches:
-      - ~:font
-      - ~:sprite
-      - ~:spriteSheet
-      - ~:animation
       - ~:texture
+      - ~:binaryFile:test
+
+  - name: imageData
+    matches:
+      - ~:sprite
+      - ~:animation
+      - ~:spriteSheet
 
   - name: shaders
     matches:
       - ~:materialDefinition
       - ~:shader
+      - ~:renderGraphDefinition
+
+  - name: meshes
+    matches:
+      - ~:mesh
+
 ...

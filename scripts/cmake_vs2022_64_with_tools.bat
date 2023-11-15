@@ -1,7 +1,7 @@
 cd ..
 mkdir build
 cd build
-cmake -G "Visual Studio 16 2019" ^
+cmake -G "Visual Studio 17 2022" ^
     -A x64 ^
     -DHALLEY_PATH=../halley ^
     -DCMAKE_INCLUDE_PATH="%~dp0\..\halley\deps\include" ^

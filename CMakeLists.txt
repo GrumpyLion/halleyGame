@@ -1,5 +1,23 @@
 cmake_minimum_required (VERSION 3.16)
 
+if(WIN32)
+	set(SDL2_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/halley/deps/include/SDL2)
+	set(SDL2_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/halley/deps/lib64/SDL2.lib)
+elseif(APPLE)
+	set(SDL2_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/halley/deps/osx/include/SDL2)
+	set(SDL2_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/halley/deps/osx/lib/libSDL2.a)
+	set(ShaderConductor_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/halley/deps/osx/include/ShaderConductor)
+
+	set(OPENSSL_CRYPTO_LIBRARY "-framework CoreFoundation")
+	set(OPENSSL_SSL_LIBRARY "-framework Security")
+elseif(UNIX)
+	# CMAKE_INCLUDE_PATH is modified in HalleyProject.cmake, adding
+	# ./halley/deps/include to the include path, which contains the Windows
+	# versions of SDL2 headers. The CI build seems to pick this up first.
+	set(SDL2_INCLUDE_DIR /usr/include/SDL2)
+	set(SDL2_LIBRARIES /usr/lib/x86_64-linux-gnu/libSDL2.so)
+endif()
+
 # halley engine path
 set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley CACHE STRING "Path to Halley root")
 
