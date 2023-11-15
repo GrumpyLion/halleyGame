@@ -1,0 +1,18 @@
+---
+
+system:
+  name: SpriteRenderer
+  families:
+    - sprite:
+      - Transform2D: read
+      - Sprite: write
+    - camera:
+      - Transform2D: write
+      - Camera: read
+  strategy: global
+  method: render
+  access:
+    - world
+    - resources
+
+...

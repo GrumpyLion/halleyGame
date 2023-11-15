@@ -3,3 +3,5 @@ entity:
     components:
       - Transform2D:
           position: [34, 8]
+game:
+  variants: {}

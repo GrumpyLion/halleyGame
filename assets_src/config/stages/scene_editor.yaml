@@ -1,3 +1,7 @@
 ---
 
+timelines:
+  render:
+    - SpriteRenderer
+
 ...
