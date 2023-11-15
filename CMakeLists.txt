@@ -18,10 +18,8 @@ elseif(UNIX)
 	set(SDL2_LIBRARIES /usr/lib/x86_64-linux-gnu/libSDL2.so)
 endif()
 
-# halley engine path
-set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley CACHE STRING "Path to Halley root")
-
 project (halleyGame)
+set(REQUIRE_WINDOWS_10 1)
 set(HALLEY_PROJECT_EMBED 1)
 set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${HALLEY_PATH}/cmake/")

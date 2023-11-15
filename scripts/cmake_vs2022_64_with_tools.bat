@@ -11,6 +11,5 @@ cmake -G "Visual Studio 17 2022" ^
     -DBUILD_HALLEY_TOOLS=1 ^
     -DBUILD_HALLEY_TESTS=1 ^
     -DBUILD_HALLEY_LAUNCHER=1 ^
-    -DHALLEY_IGNORE_CONSOLES=0 ^
     ..
 pause
