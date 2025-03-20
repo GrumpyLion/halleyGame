@@ -88,7 +88,7 @@ void GameSceneEditor::drawOverlay(Painter& painter, Rect4f view)
 	SceneEditor::drawOverlay(painter, view);
 }
 
-Vector2i GameSceneEditor::getGameResolution()
+Vector2i GameSceneEditor::getGameResolution() const
 {
 	return viewPort;
 }
@@ -98,7 +98,7 @@ Vector2i GameSceneEditor::getScreenResolution() const
 	return viewPort;
 }
 
-Vector2i GameSceneEditor::getUIResolution()
+Vector2i GameSceneEditor::getUIResolution() const
 {
 	return getGameResolution();
 }

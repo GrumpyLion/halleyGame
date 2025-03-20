@@ -56,16 +56,15 @@ ResourceOptions HalleyGame::initResourceLocator(const Path& gamePath, const Path
 			{"shaders.dat", true},
 			{"ui.dat", preloadAll},
 			{"config.dat", true},
-			{"meshes.dat", preloadAll},
+			// {"meshes.dat", preloadAll},
 			//{"music.dat", preloadAll},
 			//{"sfx.dat", preloadAll}
 		};
 		for (auto& pack : packs) {
-			locator.addPack(Path(assetsPath) / pack.name, "", pack.preLoad);
+			locator.addPack(Path(assetsPath) / pack.name, std::nullopt, pack.preLoad);
 		}
 
-		constexpr bool isPC = getPlatform() == GamePlatform::Windows || getPlatform() == GamePlatform::Linux || getPlatform() == GamePlatform::MacOS || getPlatform() == GamePlatform::UWP;
-		return ResourceOptions(isPC, isDevMode());
+		return ResourceOptions(false, isDevMode());
 	}
 }
 
@@ -74,7 +73,7 @@ String HalleyGame::getName() const
 	return "Halley Game";
 }
 
-String HalleyGame::getDataPath() const
+String HalleyGame::getDataPath(const Vector<String>& args) const
 {
 	return "Halley/HalleyGame";
 }

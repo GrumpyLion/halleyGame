@@ -30,21 +30,7 @@ if(NOT (DEFINED HALLEY_GAME_BIN_DIR))
 	set(HALLEY_GAME_BIN_DIR "bin")
 endif()
 
-set (SOURCES
-	"prec.cpp"
-	"src/game.cpp"
-	"src/game_stage.cpp"
-	"src/editor/game_scene_editor.cpp"
-	)
+file(STRINGS "source_list.txt" SOURCES)
+set_directory_properties(PROPERTIES CMAKE_CONFIGURE_DEPENDS "source_list.txt")
 
-set (HEADERS
-	"prec.h"
-	"src/game.h"
-	"src/game_stage.h"
-	"src/editor/game_scene_editor.h"
-	)
-
-set (GEN_DEFINITIONS
-	)
-
-halleyProject(halleyGame "${SOURCES}" "${HEADERS}" "" "${GEN_DEFINITIONS}" ${CMAKE_CURRENT_SOURCE_DIR}/${HALLEY_GAME_BIN_DIR})
+halleyProjectV2(halleyGame "${SOURCES}" "${HEADERS}" ${CMAKE_CURRENT_SOURCE_DIR}/${HALLEY_GAME_BIN_DIR})

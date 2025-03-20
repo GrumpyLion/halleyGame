@@ -1,0 +1,9 @@
+src/editor/game_scene_editor.cpp
+src/editor/game_scene_editor.h
+src/game.cpp
+src/game.h
+src/game_stage.cpp
+src/game_stage.h
+src/systems/sprite_render_system.cpp
+prec.h
+prec.cpp

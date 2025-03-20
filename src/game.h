@@ -10,7 +10,7 @@ public:
 	ResourceOptions initResourceLocator(const Path& gamePath, const Path& assetsPath, const Path& unpackedAssetsPath, ResourceLocator& locator) override;
 
 	String getName() const override;
-	String getDataPath() const override;
+	String getDataPath(const Vector<String>& args) const override;
 	bool isDevMode() const override;
 	std::unique_ptr<Stage> startGame() override;
 

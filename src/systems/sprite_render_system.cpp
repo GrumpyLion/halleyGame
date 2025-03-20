@@ -9,7 +9,7 @@ public:
 	{
 		const auto test = getWorld().getEntities();
 
-		spritePainter.start();
+		spritePainter.startFrame();
 		for (const auto& camera : cameraFamily) {
 			Camera cam(camera.transform2D.getGlobalPosition());
 			cam.setZoom(camera.camera.zoom);
