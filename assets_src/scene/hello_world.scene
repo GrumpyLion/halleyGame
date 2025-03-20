@@ -1,0 +1,12 @@
+entity:
+  - name: something
+    uuid: 95c97be2-39bb-4e6d-a86d-16a169b34146
+    components:
+      - Transform2D:
+          position: [0, 0]
+      - Sprite:
+          sprite:
+            material: Halley/Sprite
+            tex_image: something.png
+game:
+  variants: {}
