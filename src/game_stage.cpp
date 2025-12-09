@@ -4,7 +4,7 @@ void GameStage::init()
 {
     world = createWorld("stages/game_world");
     auto factory = EntityFactory(*world, getResources());
-    factory.createScene(getResource<Scene>("hello_world"), true);
+    factory.createScene(getResources().get<Scene>("hello_world"), true);
     factory.createEntity("camera");
 }
 
