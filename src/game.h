@@ -15,6 +15,7 @@ public:
 	std::unique_ptr<Stage> startGame() override;
 
 	std::unique_ptr<ISceneEditor> createSceneEditorInterface() override;
+	String getDevConAddress() const override;
 
 private:
 	const HalleyAPI* api;

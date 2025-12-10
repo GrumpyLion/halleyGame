@@ -3,61 +3,67 @@ nodes:
   - type: start
     position: [0, -30]
     pins:
-      - [{dstNode: 3}, {dstNode: 5}]
+      - [{dstNode: 2}, {dstNode: 4}]
   - type: debugDisplay
-    position: [32, 144]
+    position: [-32, -352]
     pins:
-      - [{dstNode: 2}]
-  - type: literal
-    settings: {value: 123}
-    position: [-160, 144]
-    pins:
-      - [{dstNode: 1}]
+      - [{dstNode: 6, dstPin: 3}]
   - type: log
     settings: {message: Hello from comet}
-    position: [96, -32]
+    position: [112, -32]
     pins:
       - [{dstNode: 0}]
-      - []
+      - [{dstNode: 9}]
       - []
   - type: setPosition
     position: [400, -256]
     pins:
-      - [{dstNode: 5, dstPin: 2}]
+      - [{dstNode: 4, dstPin: 2}]
       - []
       - []
-      - [{dstNode: 9, dstPin: 2}]
+      - [{dstNode: 8, dstPin: 2}]
   - type: lerpLoop
     settings: {time: 5}
     position: [112, -256]
     pins:
       - [{dstNode: 0}]
       - []
-      - [{dstNode: 4}]
-      - [{dstNode: 8}]
+      - [{dstNode: 3}, {dstNode: 10}]
+      - [{dstNode: 7}]
       - []
   - type: fromVector
     position: [16, -192]
     pins:
-      - [{dstNode: 7, dstPin: 3}]
+      - [{dstNode: 6, dstPin: 3}]
+      - [{dstNode: 7, dstPin: 1}]
       - [{dstNode: 8, dstPin: 1}]
-      - [{dstNode: 9, dstPin: 1}]
   - type: getPosition
     position: [-80, -192]
     pins:
       - []
       - []
       - []
-      - [{dstNode: 6}]
+      - [{dstNode: 5}, {dstNode: 1}]
   - type: arithmetic
     position: [192, -160]
     pins:
-      - [{dstNode: 5, dstPin: 3}]
-      - [{dstNode: 6, dstPin: 1}]
-      - [{dstNode: 9}]
+      - [{dstNode: 4, dstPin: 3}]
+      - [{dstNode: 5, dstPin: 1}]
+      - [{dstNode: 8}]
   - type: toVector
     position: [304, -160]
     pins:
+      - [{dstNode: 7, dstPin: 2}]
+      - [{dstNode: 5, dstPin: 2}]
+      - [{dstNode: 3, dstPin: 3}, {dstNode: 10, dstPin: 2}]
+  - type: spinwait
+    position: [208, -32]
+    pins:
+      - [{dstNode: 2, dstPin: 1}]
+  - type: log
+    settings: {message: Hello from comet}
+    position: [384, -80]
+    pins:
+      - [{dstNode: 4, dstPin: 2}]
+      - []
       - [{dstNode: 8, dstPin: 2}]
-      - [{dstNode: 6, dstPin: 2}]
-      - [{dstNode: 4, dstPin: 3}]

@@ -94,9 +94,14 @@ std::unique_ptr<Stage> HalleyGame::startGame()
 }
 
 
-std::unique_ptr<Halley::ISceneEditor> HalleyGame::createSceneEditorInterface()
+std::unique_ptr<ISceneEditor> HalleyGame::createSceneEditorInterface()
 {
 	return std::make_unique<GameSceneEditor>();
+}
+
+String HalleyGame::getDevConAddress() const
+{
+	return "127.0.0.1";
 }
 
 HalleyGame(HalleyGame);
