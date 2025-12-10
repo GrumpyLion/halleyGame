@@ -8,5 +8,10 @@ entity:
           sprite:
             material: Halley/Sprite
             tex_image: something.png
+      - Scriptable:
+          entityParams: {}
+          entityReferences: {}
+          scripts: [test]
+          tags: []
 game:
   variants: {}

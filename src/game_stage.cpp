@@ -3,6 +3,10 @@
 void GameStage::init()
 {
     world = createWorld("stages/game_world");
+
+    const auto scriptingService = std::make_shared<ScriptingService>(std::make_unique<ScriptEnvironment>(getAPI(), *world, getResources(), std::make_unique<ScriptNodeTypeCollection>()), getResources(), "", getAPI().core->isDevMode());
+    world->addService(scriptingService);
+
     auto factory = EntityFactory(*world, getResources());
     factory.createScene(getResources().get<Scene>("hello_world"), true);
     factory.createEntity("camera");

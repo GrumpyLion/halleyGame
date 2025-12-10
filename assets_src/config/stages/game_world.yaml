@@ -1,7 +1,7 @@
 ---
-
 timelines:
+  variableUpdate:
+    - Script
   render:
     - SpriteRenderer
-
 ...

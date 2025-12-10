@@ -1,0 +1,63 @@
+properties: {}
+nodes:
+  - type: start
+    position: [0, -30]
+    pins:
+      - [{dstNode: 3}, {dstNode: 5}]
+  - type: debugDisplay
+    position: [32, 144]
+    pins:
+      - [{dstNode: 2}]
+  - type: literal
+    settings: {value: 123}
+    position: [-160, 144]
+    pins:
+      - [{dstNode: 1}]
+  - type: log
+    settings: {message: Hello from comet}
+    position: [96, -32]
+    pins:
+      - [{dstNode: 0}]
+      - []
+      - []
+  - type: setPosition
+    position: [400, -256]
+    pins:
+      - [{dstNode: 5, dstPin: 2}]
+      - []
+      - []
+      - [{dstNode: 9, dstPin: 2}]
+  - type: lerpLoop
+    settings: {time: 5}
+    position: [112, -256]
+    pins:
+      - [{dstNode: 0}]
+      - []
+      - [{dstNode: 4}]
+      - [{dstNode: 8}]
+      - []
+  - type: fromVector
+    position: [16, -192]
+    pins:
+      - [{dstNode: 7, dstPin: 3}]
+      - [{dstNode: 8, dstPin: 1}]
+      - [{dstNode: 9, dstPin: 1}]
+  - type: getPosition
+    position: [-80, -192]
+    pins:
+      - []
+      - []
+      - []
+      - [{dstNode: 6}]
+  - type: arithmetic
+    position: [192, -160]
+    pins:
+      - [{dstNode: 5, dstPin: 3}]
+      - [{dstNode: 6, dstPin: 1}]
+      - [{dstNode: 9}]
+  - type: toVector
+    position: [304, -160]
+    pins:
+      - [{dstNode: 8, dstPin: 2}]
+      - [{dstNode: 6, dstPin: 2}]
+      - [{dstNode: 4, dstPin: 3}]
